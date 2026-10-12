@@ -38,7 +38,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Canvas Animation',
             filename: 'index.html',
-            template: 'src/template.html',
+            template: 'src/index.html',
         }),
     ],
 };

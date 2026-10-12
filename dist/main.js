@@ -22,8 +22,122 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `body {
-  background-color: yellow;
-}`, "",{"version":3,"sources":["webpack://./src/style/main.scss"],"names":[],"mappings":"AAAA;EACI,wBAAA;AACJ","sourcesContent":["body {\r\n    background-color: yellow;\r\n}"],"sourceRoot":""}]);
+  margin: 0;
+  font-family: "Courier New";
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background-color: black;
+}
+
+#main {
+  position: relative;
+  font-weight: bold;
+  color: white;
+  mix-blend-mode: difference;
+  text-align: center;
+  align-items: center;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+#main h1 {
+  position: fixed;
+  margin: 0;
+  font-size: 3rem;
+  right: 0;
+  top: 0;
+  padding: 5px;
+}
+
+.description {
+  position: fixed;
+  bottom: 0;
+  padding: 5px;
+}
+
+.use {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+}
+
+.cube-container {
+  perspective: 1000px;
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  margin-top: 25vh;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(47deg) rotateY(27deg);
+  animation: rotate-cube 10s infinite linear;
+}
+
+.cube-face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+}
+
+.front {
+  background: white;
+  transform: translateZ(100px);
+}
+
+.back {
+  background: white;
+  transform: rotateY(180deg) translateZ(100px);
+}
+
+.right {
+  background: white;
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.left {
+  background: white;
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.top {
+  background: white;
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+  background: white;
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+@keyframes rotate-cube {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+@media only screen and (max-width: 700px) {
+  #main {
+    font-size: x-small;
+  }
+  .cube-container {
+    margin-top: 45vh;
+  }
+}`, "",{"version":3,"sources":["webpack://./src/style/main.scss"],"names":[],"mappings":"AAAA;EACI,SAAA;EACA,0BAAA;AACJ;;AAEE;EACE,kBAAA;EACA,MAAA;EACA,OAAA;EACA,UAAA;EACA,uBAAA;AACJ;;AAEE;EACE,kBAAA;EAEA,iBAAA;EACA,YAAA;EACA,0BAAA;EACA,kBAAA;EACA,mBAAA;EACA,UAAA;EACA,WAAA;EACA,YAAA;AAAJ;;AAGE;EACE,eAAA;EACA,SAAA;EACA,eAAA;EACA,QAAA;EACA,MAAA;EACA,YAAA;AAAJ;;AAGE;EACE,eAAA;EACA,SAAA;EACA,YAAA;AAAJ;;AAGE;EACE,eAAA;EACA,SAAA;EACA,QAAA;EACA,YAAA;AAAJ;;AAGA;EACE,mBAAA;EACA,YAAA;EACA,aAAA;EACA,iBAAA;EACA,gBAAA;AAAF;;AAGA;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,4BAAA;EACA,wCAAA;EACA,0CAAA;AAAF;;AAGA;EACE,kBAAA;EACA,YAAA;EACA,aAAA;EAEA,uBAAA;AADF;;AAIA;EACE,iBAAA;EACA,4BAAA;AADF;;AAIA;EACE,iBAAA;EACA,4CAAA;AADF;;AAIA;EACE,iBAAA;EACA,2CAAA;AADF;;AAIA;EACE,iBAAA;EACA,4CAAA;AADF;;AAIA;EACE,iBAAA;EACA,2CAAA;AADF;;AAIA;EACE,iBAAA;EACA,4CAAA;AADF;;AAGA;EACE;IACE,sCAAA;EAAF;EAEA;IACE,0CAAA;EAAF;AACF;AAGA;EACE;IACE,kBAAA;EADF;EAGA;IACE,gBAAA;EADF;AACF","sourcesContent":["body {\r\n    margin: 0;\r\n    font-family: 'Courier New';\r\n}\r\n\r\n  canvas {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    z-index: 0;\r\n    background-color: black;\r\n  }\r\n\r\n  #main {\r\n    position: relative;\r\n    // background-color: black;\r\n    font-weight: bold;\r\n    color: white;\r\n    mix-blend-mode: difference;\r\n    text-align: center;\r\n    align-items: center;\r\n    z-index: 1;\r\n    width: 100%;\r\n    height: 100%;\r\n  }\r\n\r\n  #main h1 {\r\n    position: fixed;\r\n    margin: 0;\r\n    font-size: 3rem;\r\n    right: 0;\r\n    top: 0;\r\n    padding: 5px;\r\n  }\r\n\r\n  .description {\r\n    position: fixed;\r\n    bottom: 0;\r\n    padding: 5px;\r\n  }\r\n\r\n  .use {\r\n    position: fixed;\r\n    bottom: 0;\r\n    right: 0;\r\n    padding: 5px;\r\n  }\r\n\r\n.cube-container {\r\n  perspective: 1000px;\r\n  width: 200px;\r\n  height: 200px;\r\n  margin: 50px auto;\r\n  margin-top: 25vh;\r\n}\r\n\r\n.cube {\r\n  width: 100%;\r\n  height: 100%;\r\n  position: relative;\r\n  transform-style: preserve-3d;\r\n  transform: rotateX(47deg) rotateY(27deg);\r\n  animation: rotate-cube 10s infinite linear;\r\n}\r\n\r\n.cube-face {\r\n  position: absolute;\r\n  width: 200px;\r\n  height: 200px;\r\n  // opacity: 0.9;\r\n  border: 2px solid black;\r\n}\r\n\r\n.front {\r\n  background: white;\r\n  transform: translateZ(100px);\r\n}\r\n\r\n.back {\r\n  background: white;\r\n  transform: rotateY(180deg) translateZ(100px);\r\n}\r\n\r\n.right {\r\n  background: white;\r\n  transform: rotateY(90deg) translateZ(100px);\r\n}\r\n\r\n.left {\r\n  background: white;\r\n  transform: rotateY(-90deg) translateZ(100px);\r\n}\r\n\r\n.top {\r\n  background: white;\r\n  transform: rotateX(90deg) translateZ(100px);\r\n}\r\n\r\n.bottom {\r\n  background: white;\r\n  transform: rotateX(-90deg) translateZ(100px);\r\n}\r\n@keyframes rotate-cube {\r\n  from {\r\n    transform: rotateX(0deg) rotateY(0deg);\r\n  }\r\n  to {\r\n    transform: rotateX(360deg) rotateY(360deg);\r\n  }\r\n}\r\n\r\n@media only screen and (max-width: 700px) {\r\n  #main {\r\n    font-size: x-small;\r\n  }\r\n  .cube-container {\r\n    margin-top: 45vh;\r\n  }\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -466,34 +580,6 @@ function styleTagTransform(css, styleElement) {
 }
 module.exports = styleTagTransform;
 
-/***/ },
-
-/***/ "./src/test.js"
-/*!*********************!*\
-  !*** ./src/test.js ***!
-  \*********************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-function test() {
-  console.log('Test function is running.');
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (test);
-
-/***/ },
-
-/***/ "./src/assets/profile.png"
-/*!********************************!*\
-  !*** ./src/assets/profile.png ***!
-  \********************************/
-(module, __unused_webpack_exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "profile.png";
-
 /***/ }
 
 /******/ 	});
@@ -549,16 +635,6 @@ module.exports = __webpack_require__.p + "profile.png";
 /******/ 		}
 /******/ 	};
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	__webpack_require__.g = (function() {
-/******/ 		if (typeof globalThis === 'object') return globalThis;
-/******/ 		try {
-/******/ 			return this || new Function('return this')();
-/******/ 		} catch (e) {
-/******/ 			if (typeof window === 'object') return window;
-/******/ 		}
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop));
 /******/ 	
@@ -568,29 +644,6 @@ module.exports = __webpack_require__.p + "profile.png";
 /******/ 		Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 		Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 	};
-/******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		let scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		const document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript?.tagName.toUpperCase() === 'SCRIPT')
-/******/ 				scriptUrl = document.currentScript.src;
-/******/ 			if (!scriptUrl) {
-/******/ 				const scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) {
-/******/ 					let i = scripts.length - 1;
-/******/ 					while (i > -1 && (!scriptUrl || !/^https?:/.test(scriptUrl))) scriptUrl = scripts[i--].src;
-/******/ 				}
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/^blob:|[?#].*$/g, "").replace(/\/[^/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
-/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	__webpack_require__.nc = undefined;
@@ -603,16 +656,53 @@ let __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _test_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test.js */ "./src/test.js");
-/* harmony import */ var _style_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style/main.scss */ "./src/style/main.scss");
-/* harmony import */ var _assets_profile_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/profile.png */ "./src/assets/profile.png");
+/* harmony import */ var _style_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style/main.scss */ "./src/style/main.scss");
 
 
+const canvas = document.querySelector('canvas')
+const c = canvas.getContext('2d')
+
+canvas.width = innerWidth
+canvas.height = innerHeight
 
 
-const profileImage = document.getElementById('profile');
-profileImage.src = _assets_profile_png__WEBPACK_IMPORTED_MODULE_2__;
-console.log((0,_test_js__WEBPACK_IMPORTED_MODULE_0__["default"])());
+// Wave animation across screen with wave effect
+addEventListener('resize', () => {
+  canvas.width = innerWidth
+  canvas.height = innerHeight
+})
+
+const wave = {
+  length: 0.005,
+  amplitude: 60,
+  frequency: 0.02
+}
+
+let increment = wave.frequency;
+function animate() {
+  requestAnimationFrame(animate)
+  c.clearRect(0, 0, canvas.width, canvas.height)
+
+  let y = canvas.height;
+  c.beginPath()
+  c.moveTo(0, canvas.height)
+  for(let i = 0; i < canvas.width; i++) {
+      y -= 0.5;
+      const yIncrement = Math.sin(i * wave.length + increment) * wave.amplitude * Math.sin(increment)
+      c.lineTo(i, y + yIncrement)
+      c.save()
+      c.moveTo(i, y + yIncrement)
+      c.lineTo(i, canvas.height)
+      c.restore()
+  }
+  c.strokeStyle = 'white'
+  c.stroke()
+  c.closePath()
+
+  increment += wave.frequency
+}
+
+animate()
 
 })();
 
