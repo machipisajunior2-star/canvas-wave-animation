@@ -9,6 +9,9 @@
 ## Screen shot
 ![image](https://github.com/user-attachments/assets/26e393d6-c72d-4d52-939e-768b5531a164)
 
+## Live Demo
+
+- [Netlify](https://canvaswaveanimation.netlify.app/)
 
 ## Getting Started :
 # Getting Started with Webpack
