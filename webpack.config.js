@@ -7,14 +7,14 @@ module.exports = {
         main: path.resolve(__dirname, 'src/index.js'),
     },
     output: {
-        path: path.resolve(__dirname, 'public'),
+        path: path.resolve(__dirname, 'dist'),
         filename: 'main.js',
         clean: true,
         assetModuleFilename: '[name][ext]',
     },
     devServer: {
         static: {
-            directory: path.resolve(__dirname, 'public'),
+            directory: path.resolve(__dirname, 'dist'),
         },
         port: 3000,
         open: true,
