@@ -11,7 +11,7 @@
 
 ## Live Demo
 
-- [Netlify](https://canvaswaveanimation.netlify.app/)
+- [Vercel](https://canvas-wave-animation-sigma.vercel.app/)
 
 ## Getting Started :
 # Getting Started with Webpack
